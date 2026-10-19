@@ -58,6 +58,31 @@
 .story30-tools{align-items:center}
 @media(max-width:760px){.story30{margin-top:20px;padding-top:22px}.story30-head{align-items:flex-start}.story30-tools{width:100%}.story30-tools .btn{flex:1}}
 
+
+/* Refined spacing and editorial rhythm across homepage sections */
+:root{scroll-behavior:smooth;scroll-padding-top:88px}
+section{position:relative}
+#drama{padding:clamp(52px,7vw,88px) 0 clamp(58px,7vw,92px);background:linear-gradient(180deg,#fff9fc 0%,#fff 100%);border-bottom:1px solid #f4e4eb}
+#drama .drama-kicker{margin-bottom:26px;align-items:end;gap:20px}
+#drama .drama-stage{border-radius:26px;overflow:hidden;box-shadow:0 18px 48px #8f4b6710}
+#shop{padding:clamp(58px,7vw,92px) 0;background:#fff}
+#shop .sectionHead{margin-bottom:28px}
+#shop .products{row-gap:30px}
+#ourstory{padding:clamp(58px,7vw,90px) 0;background:linear-gradient(180deg,#fff8fb,#fff)}
+#faq{padding:clamp(58px,7vw,88px) 0;background:#fff}
+#contact{padding:clamp(50px,6vw,76px) 0;background:#fff7fb}
+#drama:after,#shop:after,#ourstory:after,#faq:after{content:"";display:block;position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(88%,1080px);height:1px;background:linear-gradient(90deg,transparent,#f0d8e3,transparent)}
+#drama .eyebrow,#shop .eyebrow,#ourstory .eyebrow,#faq .eyebrow{letter-spacing:2px}
+#shop .sectionHead h2,#ourstory h2,#faq h2{line-height:1.12}
+#shop .product{transition:transform .25s ease,box-shadow .25s ease}
+#shop .product:hover{transform:translateY(-5px);box-shadow:0 16px 35px #8e49640f}
+@media(max-width:760px){
+ #drama,#shop,#ourstory,#faq{padding:46px 0 54px}
+ #contact{padding:42px 0 52px}
+ #drama .drama-kicker{margin-bottom:18px}
+ #shop .products{row-gap:22px}
+}
+
 </style>
 </head>
 <body>
