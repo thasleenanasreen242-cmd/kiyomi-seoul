@@ -16,6 +16,18 @@
 @keyframes dramaFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-13px) rotate(4deg)}}@keyframes sceneReveal{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes heartRise{0%{opacity:0;transform:translateY(0) scale(.6) rotate(-10deg)}15%{opacity:1}100%{opacity:0;transform:translateY(-105px) scale(1.4) rotate(18deg)}}@keyframes productArrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes stickerFloat{0%,100%{transform:rotate(-10deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-7px)}}@keyframes kikiBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes chatPop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:760px){.drama-tropes{grid-template-columns:repeat(2,minmax(0,1fr))}.drama-stage{min-height:300px}.drama-section{padding:10px 14px 35px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 
+
+/* Layout safety: never leave a whole section invisible if an animation observer fails */
+.reveal{opacity:1;transform:none}
+.reveal.revealed{opacity:1;transform:none}
+.drama-section{padding-top:12px;padding-bottom:34px}
+.hero{margin-bottom:24px}
+.checkline{margin:18px 0}
+.productImg{background:linear-gradient(135deg,#fce7ef,#f6edf8)}
+.productImg img{display:block}
+.productImg img.img-missing{visibility:hidden}
+@media(max-width:580px){.heroBox{min-height:0}.heroImg{min-height:220px}.drama-section{padding-top:6px;padding-bottom:24px}.checkline{margin:13px 0}.productImg{height:180px}}
+
 </style>
 </head>
 <body>
@@ -114,5 +126,6 @@ $('#dramaSurprise').addEventListener('click',()=>{const keys=Object.keys(dramaSc
 /* Gentle reveal on scroll; all content remains visible when reduced motion is preferred. */
 if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('revealed');revealObserver.unobserve(entry.target)}}),{threshold:.12});$('.reveal').forEach(el=>revealObserver.observe(el))}else{$('.reveal').forEach(el=>el.classList.add('revealed'))}
 
+document.addEventListener('error',e=>{if(e.target&&e.target.matches&&e.target.matches('.productImg img'))e.target.classList.add('img-missing')},true);
 $('#year').textContent=new Date().getFullYear();renderProducts();updateCart();
 </script></body></html>
