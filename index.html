@@ -28,6 +28,17 @@
 .productImg img.img-missing{visibility:hidden}
 @media(max-width:580px){.heroBox{min-height:0}.heroImg{min-height:220px}.drama-section{padding-top:6px;padding-bottom:24px}.checkline{margin:13px 0}.productImg{height:180px}}
 
+
+/* More real photography for category tiles and interactive drama scenes */
+.drama-stage{background-size:cover;background-position:center;background-repeat:no-repeat}
+.drama-stage[data-scene="firstlove"]{background-image:linear-gradient(90deg,rgba(249,203,217,.95) 0%,rgba(199,199,233,.84) 66%,rgba(199,199,233,.55) 100%),url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85')}
+.drama-stage[data-scene="rain"]{background-image:linear-gradient(90deg,rgba(183,200,232,.96) 0%,rgba(198,183,223,.86) 66%,rgba(198,183,223,.58) 100%),url('https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=1400&q=85')}
+.drama-stage[data-scene="cafe"]{background-image:linear-gradient(90deg,rgba(246,213,180,.96) 0%,rgba(233,184,199,.86) 66%,rgba(233,184,199,.58) 100%),url('https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1400&q=85')}
+.drama-stage[data-scene="night"]{background-image:linear-gradient(90deg,rgba(183,181,223,.96) 0%,rgba(242,200,223,.86) 66%,rgba(242,200,223,.58) 100%),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85')}
+.drama-trope{overflow:hidden}.drama-trope img{display:block;width:100%;height:84px;object-fit:cover;border-radius:9px;margin-bottom:10px;background:#f9e4ed}
+.cat{overflow:hidden}.cat .cat-photo{display:block;width:100%;height:110px;object-fit:cover;border-radius:10px;margin-bottom:14px;background:#f9e4ed}
+@media(max-width:580px){.drama-trope img{height:70px}.cat .cat-photo{height:88px}}
+
 </style>
 </head>
 <body>
@@ -49,15 +60,15 @@
     </div>
   </div>
   <div class="drama-tropes" id="dramaTropes">
-    <button class="drama-trope active" data-scene-pick="firstlove" type="button"><span>🌸</span><strong>First love</strong><small>That butterflies feeling</small></button>
-    <button class="drama-trope" data-scene-pick="rain" type="button"><span>☔</span><strong>Rainy confession</strong><small>One umbrella, two hearts</small></button>
-    <button class="drama-trope" data-scene-pick="cafe" type="button"><span>☕</span><strong>Café meet-cute</strong><small>One drink, two shy smiles</small></button>
-    <button class="drama-trope" data-scene-pick="night" type="button"><span>🌙</span><strong>Midnight text</strong><small>“Are you still awake?”</small></button>
+    <button class="drama-trope active" data-scene-pick="firstlove" type="button"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=80" alt="Spring flowers" loading="lazy"><span>🌸</span><strong>First love</strong><small>That butterflies feeling</small></button>
+    <button class="drama-trope" data-scene-pick="rain" type="button"><img src="https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=500&q=80" alt="Rainy romantic scene" loading="lazy"><span>☔</span><strong>Rainy confession</strong><small>One umbrella, two hearts</small></button>
+    <button class="drama-trope" data-scene-pick="cafe" type="button"><img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=500&q=80" alt="Cozy café" loading="lazy"><span>☕</span><strong>Café meet-cute</strong><small>One drink, two shy smiles</small></button>
+    <button class="drama-trope" data-scene-pick="night" type="button"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=500&q=80" alt="Dreamy night sky" loading="lazy"><span>🌙</span><strong>Midnight text</strong><small>“Are you still awake?”</small></button>
   </div>
 </section>
 
 <section class="section" id="shop"><div class="sectionHead"><div><div class="eyebrow">THE KYOMI EDIT</div><h2>What are we loving?</h2><div class="sub">Little things that make ordinary days feel like a K-drama.</div></div><div class="sub" id="resultCount">Curated with love ♡</div></div>
-<div class="categories"><button class="cat" data-cat="fashion"><span class="emoji">🎀</span><strong>Seoul Style</strong><small>Fashion & fits</small></button><button class="cat" data-cat="beauty"><span class="emoji">🧴</span><strong>Glass Skin Club</strong><small>Beauty essentials</small></button><button class="cat" data-cat="stationery"><span class="emoji">📓</span><strong>Study Café</strong><small>Stationery & journaling</small></button><button class="cat" data-cat="accessories"><span class="emoji">🩷</span><strong>Little Treasures</strong><small>Accessories & more</small></button></div>
+<div class="categories"><button class="cat" data-cat="fashion"><img class="cat-photo" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=500&q=80" alt="Soft Korean-inspired fashion" loading="lazy"><span class="emoji">🎀</span><strong>Seoul Style</strong><small>Fashion & fits</small></button><button class="cat" data-cat="beauty"><img class="cat-photo" src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80" alt="Beauty and skincare products" loading="lazy"><span class="emoji">🧴</span><strong>Glass Skin Club</strong><small>Beauty essentials</small></button><button class="cat" data-cat="stationery"><img class="cat-photo" src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=500&q=80" alt="Journaling and stationery" loading="lazy"><span class="emoji">📓</span><strong>Study Café</strong><small>Stationery & journaling</small></button><button class="cat" data-cat="accessories"><img class="cat-photo" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Jewellery and cute accessories" loading="lazy"><span class="emoji">🩷</span><strong>Little Treasures</strong><small>Accessories & more</small></button></div>
 <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div class="filters" id="filters"><button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="fashion">Fashion</button><button class="filter" data-filter="beauty">Beauty</button><button class="filter" data-filter="stationery">Stationery</button><button class="filter" data-filter="accessories">Accessories</button></div><select id="sort" class="filter" aria-label="Sort products"><option value="featured">Sort: Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
 <div class="products" id="products"></div>
 <div class="banner"><div><div class="eyebrow" style="color:#f2b4c6">A NOTE FROM SEOUL</div><h3>Your cart called. It misses you.</h3><p>Find your little happy things and make today extra cute.</p></div><a class="btn" href="#shop">FIND YOUR FAVES ↗</a></div>
